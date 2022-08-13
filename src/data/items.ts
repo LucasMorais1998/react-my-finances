@@ -3,9 +3,9 @@ import { Item } from "../@types/Item";
 export const items: Item[] = [
   {
     date: new Date(2022, 7, 6),
-    category: "supermarket",
-    title: "Supermercado",
-    value: 750.12,
+    category: "income",
+    title: "Freelance de website",
+    value: 1750,
   },
   {
     date: new Date(2022, 7, 13),
