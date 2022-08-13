@@ -8,6 +8,7 @@ import { categories } from "../../data/categories";
 import { getCurrentMonth, filterListByMonth } from "../../helpers/dateFilter";
 
 import { Container } from "./styles";
+import TableArea from "../TableArea";
 
 const Dashboard = () => {
   const [list, setList] = useState(items);
@@ -22,7 +23,7 @@ const Dashboard = () => {
 
   return (
     <Container>
-      <h1>Dashboard</h1>
+      <TableArea/>
     </Container>
   );
 };
