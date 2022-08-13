@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --bg-color: darkblue;
+    --darkblue-color: darkblue;
 
     --white-color: #fff;
     --blue-color: blue;
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--bg-color);
+    background-color: var(--white-color);
     -webkit-font-smoothing: antialiaased;
   }
 
