@@ -9,7 +9,7 @@ const ResumeItem = ({ title, value }: IResumeItemProps) => {
   return (
     <Container>
       <ResumeItemTitle>{title}</ResumeItemTitle>
-      <ResumeItemInfo>{value}</ResumeItemInfo>
+      <ResumeItemInfo>R${value}</ResumeItemInfo>
     </Container>
   );
 };
