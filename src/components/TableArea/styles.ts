@@ -9,11 +9,11 @@ export const Table = styled.table`
   margin-top: 1.25rem;
 `;
 
-interface TableHeadColumnProps {
+interface ITableHeadColumnProps {
   width?: number;
 }
 
-export const TableHeadColumn = styled.th<TableHeadColumnProps>`
+export const TableHeadColumn = styled.th<ITableHeadColumnProps>`
   width: ${(props) => (props.width ? `${props.width}px` : "auto")};
   padding: 0.625rem 0;
   text-align: left;

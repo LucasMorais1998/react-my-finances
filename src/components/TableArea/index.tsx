@@ -1,6 +1,13 @@
+import { Item } from "../../@types/Item";
+import TableItem from "../TableItem";
+
 import { Table, TableHeadColumn } from "./styles";
 
-const TableArea = () => {
+interface ITableAreaProps {
+  list: Item[];
+}
+
+const TableArea = ({ list }: ITableAreaProps) => {
   return (
     <Table>
       <thead>
@@ -12,7 +19,11 @@ const TableArea = () => {
         </tr>
       </thead>
 
-      <tbody></tbody>
+      <tbody>
+        {list.map((item, index) => (
+          <TableItem key={index} item={item} />
+        ))}
+      </tbody>
     </Table>
   );
 };

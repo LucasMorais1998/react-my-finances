@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   return (
     <Container>
-      <TableArea/>
+      <TableArea list={filteredList}/>
     </Container>
   );
 };
