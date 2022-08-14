@@ -1,20 +1,20 @@
-import { Container } from "./styles"
+import { Table, TableHeadColumn } from "./styles";
 
 const TableArea = () => {
   return (
-    <Container>
+    <Table>
       <thead>
-        <tr>Data</tr>
-        <tr>Categoria</tr>
-        <tr>Título</tr>
-        <tr>Valor</tr>
+        <tr>
+          <TableHeadColumn width={100}>Data</TableHeadColumn>
+          <TableHeadColumn width={130}>Categoria</TableHeadColumn>
+          <TableHeadColumn>Título</TableHeadColumn>
+          <TableHeadColumn width={150}>Valor</TableHeadColumn>
+        </tr>
       </thead>
-      
-      <tbody>
 
-      </tbody>
-    </Container>
-  )
-}
+      <tbody></tbody>
+    </Table>
+  );
+};
 
-export default TableArea
+export default TableArea;
