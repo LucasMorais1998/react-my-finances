@@ -1,6 +1,8 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { formatCurrentMonth } from "../../helpers/dateFilter";
 
+import ResumeItem from "../ResumeItem";
+
 import { Container, MonthArea, ResumeArea, MonthTitle } from "./styles";
 
 interface IInforAreaProps {
@@ -10,7 +12,12 @@ interface IInforAreaProps {
   expense: number;
 }
 
-const InfoArea = ({ currentMonth, onMonthChange }: IInforAreaProps) => {
+const InfoArea = ({
+  currentMonth,
+  onMonthChange,
+  income,
+  expense,
+}: IInforAreaProps) => {
   const handlePrevMonth = () => {
     let [year, month] = currentMonth.split("-");
     let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
@@ -35,7 +42,11 @@ const InfoArea = ({ currentMonth, onMonthChange }: IInforAreaProps) => {
         <FaArrowRight onClick={handleNextMonth} className="arrow-right-icon" />
       </MonthArea>
 
-      <ResumeArea></ResumeArea>
+      <ResumeArea>
+        <ResumeItem title="Receitas" value={income} />
+        <ResumeItem title="Despesas" value={expense} />
+        <ResumeItem title="Balanço" value={income - expense} />
+      </ResumeArea>
     </Container>
   );
 };
