@@ -12,8 +12,8 @@ const TableArea = ({ list }: ITableAreaProps) => {
     <Table>
       <thead>
         <tr>
-          <TableHeadColumn width={100}>Data</TableHeadColumn>
-          <TableHeadColumn width={130}>Categoria</TableHeadColumn>
+          <TableHeadColumn width={150}>Data</TableHeadColumn>
+          <TableHeadColumn width={180}>Categoria</TableHeadColumn>
           <TableHeadColumn>Título</TableHeadColumn>
           <TableHeadColumn width={150}>Valor</TableHeadColumn>
         </tr>
