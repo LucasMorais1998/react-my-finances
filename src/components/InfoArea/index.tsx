@@ -1,9 +1,14 @@
-import { Container } from "./styles";
+import { Container, MonthArea, ResumeArea } from "./styles";
 
 const InfoArea = () => {
   return (
     <Container>
-      <h1>InfoArea</h1>
+      <MonthArea>
+
+      </MonthArea>
+      <ResumeArea>
+        
+      </ResumeArea>
     </Container>
   );
 };

@@ -7,3 +7,7 @@ export const Container = styled.div`
   padding: 1.25rem;
   margin-top: -6.5rem;
 `;
+
+export const MonthArea = styled.div``
+
+export const ResumeArea = styled.div``;
