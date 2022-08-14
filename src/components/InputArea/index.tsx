@@ -1,9 +1,26 @@
+import { Item } from "../../@types/Item";
+
 import { Container } from "./styles";
 
-const InputArea = () => {
+interface IInputAreaProps {
+  onAdd: (item: Item) => void;
+}
+
+const InputArea = ({ onAdd }: IInputAreaProps) => {
+  const handleAddEvent = () => {
+    let newItem: Item = {
+      date: new Date(),
+      category: 'food',
+      title: 'Teste',
+      value: 250,
+    }
+
+    onAdd(newItem)
+  }
+
   return (
     <Container>
-      <h1>InputArea</h1>
+      <button onClick={handleAddEvent}>Adicionar</button>
     </Container>
   );
 };

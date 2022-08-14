@@ -38,11 +38,18 @@ const Dashboard = () => {
 
     setIncome(incomeCount);
     setExpense(expenseCount);
-    
   }, [filteredList]);
 
   const handleMonthChange = (newMonth: string) => {
     setCurrentMonth(newMonth);
+  };
+
+  const handleAdditem = (item: Item) => {
+    let newList = [...list];
+
+    newList.push(item);
+
+    setList(newList);
   };
 
   return (
@@ -54,8 +61,8 @@ const Dashboard = () => {
         expense={expense}
       />
 
-      <InputArea />
-      
+      <InputArea onAdd={handleAdditem} />
+
       <TableArea list={filteredList} />
     </Container>
   );
