@@ -1,6 +1,7 @@
 import { categories } from "../../data/categories";
 import { Item } from "../../@types/Item";
 import { formatDate } from "../../helpers/dateFilter";
+import { formatCurrency } from "../../helpers/formatCurrency";
 
 import { TableLine, TableColumn, TableCategory, TableValue } from "./styles";
 
@@ -21,8 +22,8 @@ const TableItem = ({ item }: ITableItemProps) => {
       <TableColumn>
         <TableValue color={categories[item.category].expense ? "red" : "green"}>
           {categories[item.category].expense
-            ? `- R$${item.value}`
-            : `+ R$${item.value} `}
+            ? `- ${formatCurrency(item.value)}`
+            : `+ ${formatCurrency(item.value)}`}
         </TableValue>
       </TableColumn>
     </TableLine>

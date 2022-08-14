@@ -1,5 +1,6 @@
-import { Container, ResumeItemTitle, ResumeItemInfo } from "./styles";
+import { formatCurrency } from "../../helpers/formatCurrency";
 
+import { Container, ResumeItemTitle, ResumeItemInfo } from "./styles";
 interface IResumeItemProps {
   title: string;
   value: number;
@@ -10,9 +11,7 @@ const ResumeItem = ({ title, value, color }: IResumeItemProps) => {
   return (
     <Container>
       <ResumeItemTitle>{title}</ResumeItemTitle>
-      <ResumeItemInfo color={color}>
-        R${value}
-      </ResumeItemInfo>
+      <ResumeItemInfo color={color}>{formatCurrency(value)}</ResumeItemInfo>
     </Container>
   );
 };
