@@ -9,6 +9,7 @@ import { getCurrentMonth, filterListByMonth } from "../../helpers/dateFilter";
 
 import { Container } from "./styles";
 import TableArea from "../TableArea";
+import InfoArea from "../InfoArea";
 
 const Dashboard = () => {
   const [list, setList] = useState(items);
@@ -23,6 +24,7 @@ const Dashboard = () => {
 
   return (
     <Container>
+      <InfoArea />
       <TableArea list={filteredList}/>
     </Container>
   );
