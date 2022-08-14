@@ -23,7 +23,7 @@ export const MonthArea = styled.div`
     transition: all ease 0.3s;
 
     &:hover {
-      color: darkblue;
+      color: var(--darkblue-color);
     }
   }
 `

@@ -15,17 +15,26 @@ const Dashboard = () => {
   const [list, setList] = useState(items);
   const [filteredList, setFilteredList] = useState<Item[]>([]);
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
+  const [income, setIncome] = useState(0);
+  const [expense, setExpense] = useState(0)
 
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
+  }, [list, currentMonth]);
 
-  },[list, currentMonth])
-
+  const handleMonthChange = (newMonth: string) => {
+    setCurrentMonth(newMonth);
+  };
 
   return (
     <Container>
-      <InfoArea />
-      <TableArea list={filteredList}/>
+      <InfoArea 
+        currentMonth={currentMonth}
+        onMonthChange={handleMonthChange}
+        income={income}
+        expense={expense}
+      />
+      <TableArea list={filteredList} />
     </Container>
   );
 };

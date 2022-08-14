@@ -2,6 +2,12 @@ import { Item } from "../@types/Item";
 
 export const items: Item[] = [
   {
+    date: new Date(2022, 6, 31),
+    category: "salary",
+    title: "Salário",
+    value: 3500,
+  },
+  {
     date: new Date(2022, 7, 6),
     category: "income",
     title: "Freelance de website",
@@ -20,10 +26,5 @@ export const items: Item[] = [
     title: "Aluguel",
     value: 1200,
   },
-  {
-    date: new Date(2022, 8, 1),
-    category: "salary",
-    title: "Salário",
-    value: 3500,
-  },
+  
 ];
