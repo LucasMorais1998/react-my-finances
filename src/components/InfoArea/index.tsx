@@ -45,7 +45,11 @@ const InfoArea = ({
       <ResumeArea>
         <ResumeItem title="Receitas" value={income} />
         <ResumeItem title="Despesas" value={expense} />
-        <ResumeItem title="Balanço" value={income - expense} />
+        <ResumeItem
+          title="Balanço"
+          value={income - expense}
+          color={income - expense < 0 ? "red" : "green"}
+        />
       </ResumeArea>
     </Container>
   );

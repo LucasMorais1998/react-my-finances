@@ -3,13 +3,16 @@ import { Container, ResumeItemTitle, ResumeItemInfo } from "./styles";
 interface IResumeItemProps {
   title: string;
   value: number;
+  color?: string;
 }
 
-const ResumeItem = ({ title, value }: IResumeItemProps) => {
+const ResumeItem = ({ title, value, color }: IResumeItemProps) => {
   return (
     <Container>
       <ResumeItemTitle>{title}</ResumeItemTitle>
-      <ResumeItemInfo>R${value}</ResumeItemInfo>
+      <ResumeItemInfo color={color}>
+        R${value}
+      </ResumeItemInfo>
     </Container>
   );
 };

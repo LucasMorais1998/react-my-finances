@@ -11,8 +11,12 @@ export const ResumeItemTitle = styled.div`
   margin-bottom: 0.375rem;
 `;
 
-export const ResumeItemInfo = styled.div`
+interface IResumeItemInfoProps {
+  color?: string;
+}
+
+export const ResumeItemInfo = styled.div<IResumeItemInfoProps>`
   text-align: center;
   font-weight: 500;
-  color: #000;
+  color: ${(props) => props.color ?? "#000"};
 `;
