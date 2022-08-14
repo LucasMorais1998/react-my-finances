@@ -7,9 +7,11 @@ import { categories } from "../../data/categories";
 
 import { getCurrentMonth, filterListByMonth } from "../../helpers/dateFilter";
 
-import { Container } from "./styles";
-import TableArea from "../TableArea";
 import InfoArea from "../InfoArea";
+import InputArea from "../InputArea";
+import TableArea from "../TableArea";
+
+import { Container } from "./styles";
 
 const Dashboard = () => {
   const [list, setList] = useState(items);
@@ -51,6 +53,9 @@ const Dashboard = () => {
         income={income}
         expense={expense}
       />
+
+      <InputArea />
+      
       <TableArea list={filteredList} />
     </Container>
   );
