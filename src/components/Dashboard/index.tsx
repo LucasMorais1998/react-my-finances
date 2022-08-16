@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import { Item } from "../../@types/Item";
-import { Category } from "../../@types/Category";
 import { items } from "../../data/items";
 import { categories } from "../../data/categories";
 
