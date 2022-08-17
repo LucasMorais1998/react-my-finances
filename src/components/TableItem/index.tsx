@@ -1,4 +1,10 @@
-import { FaCoins, FaMoneyBill, FaShoppingCart } from "react-icons/fa";
+import {
+  FaCoins,
+  FaMinus,
+  FaMoneyBill,
+  FaPlus,
+  FaShoppingCart,
+} from "react-icons/fa";
 import { MdFastfood, MdSensorDoor } from "react-icons/md";
 
 import { Item } from "../../@types/Item";
@@ -45,9 +51,17 @@ const TableItem = ({ item }: ITableItemProps) => {
       <TableColumn>{item.title}</TableColumn>
       <TableColumn>
         <TableValue color={categories[item.category].expense ? "red" : "green"}>
-          {categories[item.category].expense
-            ? `- ${formatCurrency(item.value)}`
-            : `+ ${formatCurrency(item.value)}`}
+          {categories[item.category].expense ? (
+            <>
+              <FaMinus className="table-value-icon" />
+              {formatCurrency(item.value)}
+            </>
+          ) : (
+            <>
+              <FaPlus className="table-value-icon" />
+              {formatCurrency(item.value)}
+            </>
+          )}
         </TableValue>
       </TableColumn>
     </TableLine>

@@ -27,4 +27,10 @@ export const TableCategory = styled.div<ITableCategoryProps>`
 export const TableValue = styled.div<ITableValueProps>`
   color: ${(props) => props.color};
   font-weight: 500;
+
+  .table-value-icon {
+    color: ${(props) => props.color};
+    margin-right: 0.3rem;
+    font-size: 0.6rem;
+  }
 `;
