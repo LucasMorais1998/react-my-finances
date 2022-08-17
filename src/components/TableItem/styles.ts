@@ -13,7 +13,11 @@ interface ITableCategoryProps {
 interface ITabaleValue extends ITableCategoryProps {}
 
 export const TableCategory = styled.div<ITableCategoryProps>`
-  display: inline-block;
+  width: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: .3rem;
   padding: 0.3rem 0.625rem;
   border-radius: 0.3rem;
   color: var(--white-color);
