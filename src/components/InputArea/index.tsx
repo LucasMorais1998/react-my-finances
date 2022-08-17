@@ -28,7 +28,9 @@ interface IInputAreaProps {
 const InputArea = ({ onAdd }: IInputAreaProps) => {
   const { register, handleSubmit } = useForm<IIputsData>();
 
-  const categories = Object.keys(C);
+  const categories = Object.values(C).map((category, index) => {
+    return { title: category.title, value: Object.keys(C)[index] };
+  });
 
   const regexInputDate =
     /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/;
@@ -76,8 +78,8 @@ const InputArea = ({ onAdd }: IInputAreaProps) => {
               Selecione
             </option>
             {categories.map((item, index) => (
-              <option key={index} value={item}>
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+              <option key={index} value={item.value}>
+                {item.title.charAt(0).toUpperCase() + item.title.slice(1)}
               </option>
             ))}
           </select>
