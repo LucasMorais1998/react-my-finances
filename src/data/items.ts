@@ -37,4 +37,16 @@ export const items: Item[] = [
     title: "Aluguel",
     value: 1200,
   },
+  {
+    date: new Date(2022, 7, 17),
+    category: "market",
+    title: "Mercado",
+    value: 873.25
+  },
+  {
+    date: new Date(2022, 7, 31),
+    category: "salary",
+    title: "Salário",
+    value: 3500,
+  },
 ];
