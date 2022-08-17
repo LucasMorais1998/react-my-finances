@@ -59,7 +59,7 @@ const InputArea = ({ onAdd }: IInputAreaProps) => {
           <input
             id="date"
             type="text"
-            placeholder="mm/dd/aaaa"
+            placeholder="MM/DD/AAAA"
             {...register("date", {
               pattern: regexInputDate,
             })}
