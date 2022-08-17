@@ -1,6 +1,6 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-import { categories as C } from "../../data/categories";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { Item } from "../../@types/Item";
+import { categories as C } from "../../data/categories";
 
 import { Container } from "./styles";
 
@@ -11,7 +11,7 @@ enum CategoryEnum {
   salary = "salary",
   market = "market",
 }
-interface InputsData {
+interface IIputsData {
   date: Date;
   category: CategoryEnum;
   title: string;
@@ -23,11 +23,11 @@ interface IInputAreaProps {
 }
 
 const InputArea = ({ onAdd }: IInputAreaProps) => {
-  const { register, handleSubmit } = useForm<InputsData>();
+  const { register, handleSubmit } = useForm<IIputsData>();
 
   const categories = Object.keys(C);
 
-  const onSubmit: SubmitHandler<InputsData> = ({
+  const onSubmit: SubmitHandler<IIputsData> = ({
     date,
     category,
     title,
@@ -46,9 +46,10 @@ const InputArea = ({ onAdd }: IInputAreaProps) => {
   return (
     <Container>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="">
+        <label htmlFor="date">
           Data:
           <input
+            id="date"
             type="text"
             placeholder="mm/dd/aaaa"
             {...register("date", {
@@ -58,26 +59,38 @@ const InputArea = ({ onAdd }: IInputAreaProps) => {
           />
         </label>
 
-        <label htmlFor="">Categoria:</label>
-        <select defaultValue={"Default"} required {...register("category")}>
-          <option value="Default" disabled>
-            Selecione
-          </option>
-          {categories.map((item, index) => (
-            <option key={index} value={item}>
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+        <label htmlFor="category">
+          Categoria:
+          <select
+            id="category"
+            defaultValue={"Default"}
+            required
+            {...register("category")}
+          >
+            <option value="Default" disabled>
+              Selecione
             </option>
-          ))}
-        </select>
-
-        <label htmlFor="">
-          Título:
-          <input type="text" {...register("title", { required: true })} />
+            {categories.map((item, index) => (
+              <option key={index} value={item}>
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </option>
+            ))}
+          </select>
         </label>
 
-        <label htmlFor="">
+        <label htmlFor="title">
+          Título:
+          <input
+            id="title"
+            type="text"
+            {...register("title", { required: true })}
+          />
+        </label>
+
+        <label htmlFor="value">
           Valor:
           <input
+            id="value"
             type="number"
             min="1"
             step="any"
