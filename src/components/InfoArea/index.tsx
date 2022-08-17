@@ -5,7 +5,7 @@ import ResumeItem from "../ResumeItem";
 
 import { Container, MonthArea, ResumeArea, MonthTitle } from "./styles";
 
-interface IInforAreaProps {
+interface IInfoAreaProps {
   currentMonth: string;
   onMonthChange: (newMonth: string) => void;
   income: number;
@@ -17,7 +17,7 @@ const InfoArea = ({
   onMonthChange,
   income,
   expense,
-}: IInforAreaProps) => {
+}: IInfoAreaProps) => {
   const handlePrevMonth = () => {
     let [year, month] = currentMonth.split("-");
     let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
