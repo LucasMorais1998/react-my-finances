@@ -10,21 +10,21 @@ interface ITableCategoryProps {
   color: string;
 }
 
-interface ITabaleValue extends ITableCategoryProps {}
+interface ITableValueProps extends ITableCategoryProps {}
 
 export const TableCategory = styled.div<ITableCategoryProps>`
   width: max-content;
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
   padding: 0.3rem 0.625rem;
   border-radius: 0.3rem;
   color: var(--white-color);
   background-color: ${(props) => props.color};
 `;
 
-export const TableValue = styled.div<ITabaleValue>`
+export const TableValue = styled.div<ITableValueProps>`
   color: ${(props) => props.color};
   font-weight: 500;
 `;
