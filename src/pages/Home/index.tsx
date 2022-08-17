@@ -6,8 +6,8 @@ import { Container } from "./styles";
 const Home = () => {
   return (
     <Container>
-      <Header/>
-      <Dashboard/>
+      <Header />
+      <Dashboard />
     </Container>
   );
 };

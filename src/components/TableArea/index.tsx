@@ -1,4 +1,5 @@
 import { Item } from "../../@types/Item";
+
 import TableItem from "../TableItem";
 
 import { Table, TableHeadColumn } from "./styles";

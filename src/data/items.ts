@@ -41,7 +41,7 @@ export const items: Item[] = [
     date: new Date(2022, 7, 17),
     category: "market",
     title: "Mercado",
-    value: 873.25
+    value: 873.25,
   },
   {
     date: new Date(2022, 7, 31),

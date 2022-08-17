@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
 import { Item } from "../../@types/Item";
-import { items } from "../../data/items";
-import { categories } from "../../data/categories";
 
-import { getCurrentMonth, filterListByMonth } from "../../helpers/dateFilter";
+import { categories } from "../../data/categories";
+import { items } from "../../data/items";
+
+import { filterListByMonth, getCurrentMonth } from "../../helpers/dateFilter";
 
 import InfoArea from "../InfoArea";
 import InputArea from "../InputArea";

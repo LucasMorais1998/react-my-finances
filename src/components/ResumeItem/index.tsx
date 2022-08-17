@@ -1,6 +1,6 @@
 import { formatCurrency } from "../../helpers/formatCurrency";
 
-import { Container, ResumeItemTitle, ResumeItemInfo } from "./styles";
+import { Container, ResumeItemInfo, ResumeItemTitle } from "./styles";
 interface IResumeItemProps {
   title: string;
   value: number;

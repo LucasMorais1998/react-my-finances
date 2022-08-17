@@ -26,7 +26,7 @@ export const MonthArea = styled.div`
       color: var(--darkblue-color);
     }
   }
-`
+`;
 
 export const MonthTitle = styled.div`
   flex: 1;

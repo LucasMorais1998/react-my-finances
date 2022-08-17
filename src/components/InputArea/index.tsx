@@ -1,5 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
+
 import { Item } from "../../@types/Item";
+
 import { categories as C } from "../../data/categories";
 
 import { Container } from "./styles";
@@ -11,6 +13,7 @@ enum CategoryEnum {
   salary = "salary",
   market = "market",
 }
+
 interface IIputsData {
   date: Date;
   category: CategoryEnum;

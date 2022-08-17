@@ -1,10 +1,12 @@
-import { Item } from "../../@types/Item";
-import { categories } from "../../data/categories";
-import { formatDate } from "../../helpers/dateFilter";
-import { formatCurrency } from "../../helpers/formatCurrency";
-
 import { FaCoins, FaMoneyBill, FaShoppingCart } from "react-icons/fa";
 import { MdFastfood, MdSensorDoor } from "react-icons/md";
+
+import { Item } from "../../@types/Item";
+
+import { categories } from "../../data/categories";
+
+import { formatDate } from "../../helpers/dateFilter";
+import { formatCurrency } from "../../helpers/formatCurrency";
 
 import { TableCategory, TableColumn, TableLine, TableValue } from "./styles";
 

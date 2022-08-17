@@ -5,7 +5,7 @@ const Header = () => {
     <Container>
       <h1>my Finances</h1>
     </Container>
-  )
+  );
 };
 
 export default Header;

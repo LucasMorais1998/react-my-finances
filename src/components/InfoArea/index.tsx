@@ -1,9 +1,10 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 import { formatCurrentMonth } from "../../helpers/dateFilter";
 
 import ResumeItem from "../ResumeItem";
 
-import { Container, MonthArea, ResumeArea, MonthTitle } from "./styles";
+import { Container, MonthArea, MonthTitle, ResumeArea } from "./styles";
 
 interface IInfoAreaProps {
   currentMonth: string;
