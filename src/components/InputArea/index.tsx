@@ -30,6 +30,9 @@ const InputArea = ({ onAdd }: IInputAreaProps) => {
 
   const categories = Object.keys(C);
 
+  const regexInputDate =
+    /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/;
+
   const onSubmit: SubmitHandler<IIputsData> = ({
     date,
     category,
@@ -56,8 +59,7 @@ const InputArea = ({ onAdd }: IInputAreaProps) => {
             type="text"
             placeholder="mm/dd/aaaa"
             {...register("date", {
-              pattern:
-                /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/,
+              pattern: regexInputDate,
             })}
           />
         </label>
